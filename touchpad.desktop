@@ -14,8 +14,10 @@ X-KDE-System-Settings-Parent-Category=keyboard-and-mouse
 X-KDE-Weight=50
 
 Name=Touchpad
+Name[fr]=Pavé tactile
 
 Comment=Touchpad settings
 Comment[nl]=Touchpad instellen
+Comment[fr]=Configuration du pavé tactile
 
 X-KDE-Keywords=Touchpad,Synaptics

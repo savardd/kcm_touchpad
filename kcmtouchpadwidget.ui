@@ -796,7 +796,7 @@
                <string>Move angle (radians) of finger to generate a scroll event.</string>
               </property>
               <property name="minimum">
-               <number>30</number>
+               <number>1</number>
               </property>
               <property name="maximum">
                <number>300</number>
@@ -859,6 +859,9 @@
            <widget class="QCheckBox" name="TappingEnableCB">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>If enabled, a tap on the touchpad will emulate a mouse clic.</string>
             </property>
             <property name="text">
              <string>Enable Tapping</string>
@@ -1118,6 +1121,9 @@
            <widget class="QLabel" name="TappingMaxMoveL">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>The maximum movement above wich tapping will be ignored.</string>
             </property>
             <property name="text">
              <string>Max Tap Move:</string>

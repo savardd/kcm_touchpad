@@ -453,7 +453,7 @@ bool TouchpadConfig::apply()
         Touchpad::set_parameter("CircularScrolling", ui->ScrollCircularEnableCB->isChecked());
     }
     if (this->propertiesList.contains(SYNAPTICS_PROP_CIRCULAR_SCROLLING_DIST)) {
-        Touchpad::set_parameter("CircScrollDelta", ui->ScrollCircularSpeedS->value());
+        Touchpad::set_parameter("CircScrollDelta", ui->ScrollCircularSpeedS->value() / 100.0f);
     }
     if (this->propertiesList.contains(SYNAPTICS_PROP_CIRCULAR_SCROLLING_TRIGGER)) {
         Touchpad::set_parameter("CircScrollTrigger", ui->ScrollCircularCornersCBB->currentIndex());
@@ -712,7 +712,7 @@ void TouchpadConfig::init_touchpad()
         Touchpad::set_parameter("CircularScrolling", config.readEntry("CircularScrolling", -1));
     }
     if (propertiesList.contains(SYNAPTICS_PROP_CIRCULAR_SCROLLING_DIST)) {
-        Touchpad::set_parameter("CircScrollDelta", config.readEntry("CircScrollDelta", -1));
+        Touchpad::set_parameter("CircScrollDelta", config.readEntry("CircScrollDelta", -1) / 100.0f);
     }
     if (propertiesList.contains(SYNAPTICS_PROP_CIRCULAR_SCROLLING_TRIGGER)) {
         Touchpad::set_parameter("CircScrollTrigger", (Synaptics::ScrollTrigger)config.readEntry("CircScrollTrigger", -1));
